@@ -9,7 +9,10 @@ Create a new folder:
 > mkdir Django_EmployeeSalaryApp  
 
 move into that folder:
-> cd Django_EmployeeSalaryApp 
+> cd Django_EmployeeSalaryApp
+
+source /Users/mac/Diverg_CapstoneProject/Django_CapstoneProject/
+.venv/bin/activate
 
 Create a new django project with admin functionality:
 > django-admin startproject hello_project .<img width="1358" alt="Screenshot 2024-01-24 at 8 46 21 PM" src="https://github.com/asanni2022/Django_CapstoneProject/assets/104282577/9cc32b85-4cf8-4f79-b613-04dc7190c2bd">
