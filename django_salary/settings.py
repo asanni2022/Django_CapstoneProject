@@ -93,10 +93,10 @@ WSGI_APPLICATION = "django_salary.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
+        "NAME": "postgresdb",
         "USER": "postgresuser",
         "PASSWORD": "D@t@b@se24",
-        "HOST": "empsalaryapp.postgres.database.azure.com",
+        "HOST": "localhost",
         "PORT": "5432"
     }
 }
