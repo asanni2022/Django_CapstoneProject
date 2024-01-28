@@ -67,18 +67,56 @@ Create a new folder:
 move into that folder:
 > cd Django_EmployeeSalaryApp
 
+## Create Virtual Environment
+```
+Python3 -m venv .venv
 source /Users/mac/Diverg_CapstoneProject/Django_CapstoneProject/
 .venv/bin/activate
+```
 
 Create a new django project with admin functionality:
-> django-admin startproject hello_project .<img width="1358" alt="Screenshot 2024-01-24 at 8 46 21 PM" src="https://github.com/asanni2022/Django_CapstoneProject/assets/104282577/9cc32b85-4cf8-4f79-b613-04dc7190c2bd">
+```
+- Install All dependencies
+pip install django
+Pip install djangorestframework
+Pip install django-cors-headers   # unblocks request to different domains
+
+django-admin startproject hello_project . # files: (init.py indicates its a python module; asgi.py entry point for asgi compatible webservers; wsgi.py entry point for wsgi compatible webservers; urls.py: contains all the url declaration needed for the project; settings.py conguration at project level; manage.py: CLI utility that helps interact with the python project)
+- Run the Project to Test django setup
+python manage.py runserver
+- running port: http://127.0.0.1:8000/
+
+- Create App to implement API methods
+python manage.py startapp SalaryApp   # Configure settings.py with the newly created App
+- update models.py with models ( DB Tables are created from this model) needed for our App.
+
+- Build Database
+pip install psycopg2   # DB adaptor, To connect to Postgresql from Django App.
+
+Create a Azure Postgresql Database or Local Postgres DB
+- Test DB connection using DBerver or PG-Admin
+- Create Database
+- Add database details in the settings.py at project level
+
+# Create tables for models
+python manage.py makemigration SalaryApp
+python manage.py migrate SalaryApp   # push changes to database to create tables
 
 
-Build Database
-> python manage.py migrate
+- From PG-Admin Insert records into tables
+
+# Create serializers.py at App level  # This helps to conert and breakdown complex types or model into python data types rendered in json or others.
+# views.py contains the API methods and where we handles the CRUD (GET, POST, PUT, DELETE) operations
+
+
+```
+<img width="1358" alt="Screenshot 2024-01-24 at 8 46 21 PM" src="https://github.com/asanni2022/Django_CapstoneProject/assets/104282577/9cc32b85-4cf8-4f79-b613-04dc7190c2bd">
+
+
+
 ><img width="633" alt="Screenshot 2024-01-24 at 9 29 44 PM" src="https://github.com/asanni2022/Django_CapstoneProject/assets/104282577/4cde1ccb-0501-4dfb-b6fa-cf404e50e435">
 
-> pip install psycopg2
+
 >![Screenshot 2024-01-24 at 10 30 00 PM](https://github.com/asanni2022/Django_CapstoneProject/assets/104282577/79232744-771f-4e00-9ac0-c98f99316e69)
 
 
