@@ -1,6 +1,6 @@
 # Django_CapstoneProject
 
-## Combined and Improved Project Description: Automating Employee Salary Processing with Django and Azure
+## Project Description: Automating Employee Salary Processing with Django and Azure
 
 **Problem:** Traditional manual salary processing is inefficient, error-prone, and consumes valuable resources. This project tackles these challenges by developing an automated and secure system using Django and Azure cloud services.
 
