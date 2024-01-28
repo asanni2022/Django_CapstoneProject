@@ -108,6 +108,9 @@ python manage.py migrate SalaryApp   # push changes to database to create tables
 # Create serializers.py at App level  # This helps to conert and breakdown complex types or model into python data types rendered in json or others.
 # views.py contains the API methods and where we handles the CRUD (GET, POST, PUT, DELETE) operations
 
+# Requirements file
+pip freeze > requirements.txt
+deactivate
 
 ```
 <img width="1358" alt="Screenshot 2024-01-24 at 8 46 21 PM" src="https://github.com/asanni2022/Django_CapstoneProject/assets/104282577/9cc32b85-4cf8-4f79-b613-04dc7190c2bd">
