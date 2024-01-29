@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: https://index.docker.io/v1/
-        username: ${{ secrets.AzureAppService_ContainerUsername_cb478f6e929b41db81b72d95818b8c0d }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_8754d97b97174c5e8142e33a049e2343 }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_07f844019fc74fb081d564dd17081d1c }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_82de9c7528a1447ab28291aa8fae17fa }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_cb478f6e929b41db81b72d95818b8c0d }}/salaryapp:${{ github.sha }}
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_07f844019fc74fb081d564dd17081d1c }}/asanni2022/salaryapp:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'salarywebapp'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_225cd7af1ba645f2b84e0263f87d2375 }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_cb478f6e929b41db81b72d95818b8c0d }}/salaryapp:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_d5e3626ba64c46b6a323c3e6f68be472 }}
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_07f844019fc74fb081d564dd17081d1c }}/asanni2022/salaryapp:${{ github.sha }}'
