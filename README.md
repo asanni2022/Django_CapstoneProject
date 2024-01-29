@@ -132,8 +132,50 @@ deactivate
 
 ![Screenshot 2024-01-24 at 11 00 30 PM](https://github.com/asanni2022/Django_CapstoneProject/assets/104282577/e79807ec-fe6b-4997-b1a3-d511ceac5fe8)
 
+```
+GET:
+[
+    {
+        "Employeeid": 1,
+        "EmplyeeName": "[saed Man]",
+        "EmployeeEmail": "s.man@contoso.com",
+        "PhotoFileName": "man.jpg",
+        "DepartmentName": "IT",
+        "DateOfJoining": "2000-01-01",
+        "EmployeeSalary": 250000.0
+    },
+    {
+        "Employeeid": 2,
+        "EmplyeeName": "Mandy Kane]",
+        "EmployeeEmail": "m.Kane@contoso.com",
+        "PhotoFileName": "kane.jpg",
+        "DepartmentName": "Finance",
+        "DateOfJoining": "2002-01-01",
+        "EmployeeSalary": 350000.0
+    },
+    {
+        "Employeeid": 3,
+        "EmplyeeName": "Marry Jane]",
+        "EmployeeEmail": "m.Jane@contoso.com",
+        "PhotoFileName": "Jane.jpg",
+        "DepartmentName": "Support",
+        "DateOfJoining": "2005-01-01",
+        "EmployeeSalary": 150000.0
+    }
+]
 
+POST:
+    {
+        "Employeeid": 1,
+        "EmplyeeName": "[saed Man]",
+        "EmployeeEmail": "s.man@contoso.com",
+        "PhotoFileName": "man.jpg",
+        "DepartmentName": "IT",
+        "DateOfJoining": "2000-01-01",
+        "EmployeeSalary": 250000.0
+    }
 
+```
 
 ![Screenshot 2024-01-25 at 8 57 40 PM](https://github.com/asanni2022/Django_CapstoneProject/assets/104282577/edbca863-ddee-4213-b801-61f27f4a0dd5)
 
