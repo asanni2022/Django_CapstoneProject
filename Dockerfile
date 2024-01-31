@@ -22,5 +22,5 @@ COPY . /app/
 
 # Run the command to start uWSGI
 # CMD ["gunicorn", "django_salary.wsgi:application", "--bind", "0.0.0.0:8001"]
-
-CMD [ "python manage.py runserver 0.0.0.0:8001" ]
+CMD ["gunicorn", "django_salary.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "3"]
+# CMD [ "python manage.py runserver 0.0.0.0:8001" ]
