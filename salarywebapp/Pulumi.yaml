@@ -1,0 +1,6 @@
+name: salarywebapp
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: Pulumi Python IAC to deploy and confirgure Azure web app.

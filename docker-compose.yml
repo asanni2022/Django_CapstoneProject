@@ -4,29 +4,22 @@ services:
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8001
+    # gunicorn django_salary.wsgi:application --bind 0.0.0.0:8001 --workers 3
     volumes:
       - .:/app
     ports:
       - "8001:8001"
-    depends_on:
-      - db
-    environment:
-      - DEBUG=1  # Set to 0 in production
-      - SECRET_KEY=YourSecretKey  # Change to your secret key
-      - DB_NAME=postgres
-      - DB_USER=postgres
-      - DB_PASSWORD=postgres
-      - DB_HOST=db
-      - DB_PORT=5432
+    env_file:
+      - .env  # Using the .env file for environment variables
 
-  db:
-    image: postgres:12
-    volumes:
-      - postgres_data:/var/lib/postgresql/data/
-    environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+  # db:
+  #   image: postgres:12
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data/
+  #   environment:
+  #     - POSTGRES_DB=${DB_NAME}  # Using variables from .env file
+  #     - POSTGRES_USER=${DB_USER}
+  #     - POSTGRES_PASSWORD=${DB_PASSWORD}
 
-volumes:
-  postgres_data:
+# volumes:
+#   postgres_data:

@@ -21,4 +21,6 @@ RUN pip install --upgrade pip \
 COPY . /app/
 
 # Run the command to start uWSGI
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8001", "--noreload"]
+# CMD ["gunicorn", "django_salary.wsgi:application", "--bind", "0.0.0.0:8001"]
+
+CMD [ "python manage.py runserver 0.0.0.0:8001" ]
