@@ -7,8 +7,6 @@ from .views import  employeeApi, departmentApi, SaveFile, home_salaryapp_view
 urlpatterns = [
      # Home page URL
     path('', home_salaryapp_view, name='home'), # Forwarding the home page from project level urls.py to app level urls.py
-    # url(r'^employee$', views.employeeApi), # Forwarding the employee page from project level urls.py to app level urls.py
-    # url(r'^employee/([0-9]+)$', views.employeeApi),
 
      # URL for listing all employees or adding a new employee (GET, POST)
     path('employee/', employeeApi, name='employee-list'),

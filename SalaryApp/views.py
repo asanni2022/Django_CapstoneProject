@@ -3,6 +3,7 @@ from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 from django.core.files.storage import default_storage
+from django.shortcuts import render
 
 from SalaryApp.models import Employee, Department
 from SalaryApp.serializers import EmployeeSerializer, DepartmentSerializer
@@ -96,4 +97,5 @@ def SaveFile(request):
         return JsonResponse({"error": str(e)}, status=500)
 
 def home_salaryapp_view(request):
-    return HttpResponse("Hello Employees! Welcome to the SalaryApp API. Let's Make Magic HaPpEn!!!")
+    #return HttpResponse("Hello Employees! Welcome to the SalaryApp API. Let's Make Magic HaPpEn!!!")
+    return render(request, 'landing_page.html')

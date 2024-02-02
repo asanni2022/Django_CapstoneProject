@@ -28,9 +28,4 @@ urlpatterns = [
     # Include the URLS from the SalaryApp app
     path('', include('SalaryApp.urls')), # Forwarding the home page from project level urls.py to app level urls.py
     
-    # url(r'^employee$', views.employeeApi), # Forwarding the employee page from project level urls.py to app level urls.py
-    # url(r'^', include('SalaryApp.urls')),
-    # path('SalaryApp/', include('SalaryApp.urls')),
-    # re_path(r'^employee$', include('SalaryApp.urls')),
-    # re_path(r'^', include('SalaryApp.urls')),
 ]
